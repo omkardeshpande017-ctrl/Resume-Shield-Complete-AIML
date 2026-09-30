@@ -1,0 +1,11 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: resume-shield-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - resume_shield_mongo:/data/db
+volumes:
+  resume_shield_mongo:
